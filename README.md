@@ -1,4 +1,4 @@
-# hyprland-rice
+# My Hyprland Rice
 My dot files for hyprland. 
 
 hyrland
