@@ -1,2 +1,7 @@
 # hyprland-rice
-My dot files for hyprland.
+My dot files for hyprland. 
+
+hyrland
+rofi
+kitty
+waybar
