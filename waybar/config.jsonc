@@ -1,0 +1,85 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+
+  "modules-right": ["temperature", "memory", "pulseaudio", "network", "battery", "custom/power"],
+
+  // "hyprland/workspaces": {
+  //   "disable-scroll": true,
+  //   "all-outputs": true,
+  //   "format": "{name}"
+  // },
+  "hyprland/workspaces": {
+	"format": "{name} {icon}",
+	"format-icons": {
+		"1": "",
+		"2": "",
+		"3": "",
+    "4": "",
+		"default": ""
+	},
+       "persistent-workspaces": {
+             "*": 4 // 5 workspaces by default on every monitor
+       }
+  },
+
+  "clock": {
+    "format": "{:%H:%M  %d %b %Y}",
+    "tooltip-format": "{:%A, %B %d %Y}"
+  },
+
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": " Muted",
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle": "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " {ipaddr}",
+    "format-disconnected": " Disconnected",
+    "on-click-right": "tray"
+  },
+
+  "tray": {
+  },
+
+  "battery": {
+    "bat": "BATT",
+    "interval": 5,
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-discharging": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+
+  "custom/power": {
+    "format": "",
+    "tooltip": "Power Menu",
+    "on-click": "~/.config/waybar/scripts/powermenu.sh",
+    "interval": 0
+    },
+  
+  "cpu": {
+      "format": " {usage}%",
+      "tooltip": false
+  },
+
+  "memory": {
+      "format": " {used}G",
+      "tooltip": false
+  },
+
+  "temperature": {
+    "format": "{temperatureC}°C ",
+    "critical-threshold": 80
+  }
+}
