@@ -21,6 +21,12 @@ rm -r $(pwd)/rofi
 echo "Copying Rofi config..." 
 cp -r ~/.config/rofi $(pwd)
 
+echo "Deleting FastFetch config..."
+rm -r $(pwd)/fastfetch
+echo "Copying FastFetch config..." 
+cp -r ~/.config/fastfetch $(pwd)
+
+
 echo "Deleting ~/.local/bin ..."
 rm -r $(pwd)/bin
 echo "Copying ~/.local/bin ..." 
